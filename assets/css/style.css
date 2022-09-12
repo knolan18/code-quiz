@@ -1,0 +1,263 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: "Indie Flower", cursive;
+}
+
+:root {
+  --purple: #9b209b;
+  --blue: #0eb1da;
+  --green: #49d849;
+  --lightGreen: #76cd76;
+  --lightPurple: #8a8ada;
+  --correctAnswer: #5dc948;
+  --wrongAnswer: #d34444;
+  --btnNeutral: #e0adf0;
+}
+
+body {
+  padding: 0;
+  margin-top: 50px;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 5em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bolder;
+  color: var(--purple);
+}
+
+/* Welcome Screen */
+.welcomeScreen {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: -webkit-fill-available;
+}
+
+.welcomeScreen h2 {
+  display: inline-flex;
+  flex-wrap: wrap;
+  font-size: 3.5em;
+  /* margin-inline-start: 0px;
+  margin-inline-end: 0px; */
+  font-weight: bolder;
+  color: var(--blue);
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.welcomeScreen #startBtn {
+  display: inline-flex;
+  border: 0.5em dotted var(--lightGreen);
+  background-color: greenyellow;
+  text-align: center;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  font-size: 50px;
+}
+
+/* Questions Screen */
+.questionsBlock {
+  font-size: 1.75em;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.questionsContainer {
+  display: flex;
+  align-content: space-between;
+  background-color: white;
+  border-radius: 5px solid white;
+  padding: 10px;
+}
+
+.answerContainer {
+  max-width: 80%;
+  background-color: white;
+  border-radius: 5px solid white;
+  padding: 10px;
+}
+
+.score-timer {
+  text-align: start;
+  align-items: end;
+}
+
+.btnGrid {
+  display: grid;
+  grid-template-columns: repeat(4 auto);
+  gap: 10px;
+  margin: 20px 0px;
+  max-width: 70%;
+  justify-content: center;
+  align-content: center;
+}
+
+.btn {
+  display: flex;
+  background-color: var(--btnNeutral);
+  border: 3px dashed var(--lightPurple);
+  border-radius: 5px;
+  padding: 5px;
+  outline: none;
+  font-size: 1.5em;
+  justify-content: center;
+  align-content: center;
+}
+
+.btn:hover {
+  border-color: black;
+}
+
+.btn.correct {
+  background-color: var(--correctAnswer);
+}
+
+.btn.wrong {
+  background-color: var(--wrongAnswer);
+  color: white;
+}
+
+.controls {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-right: 15%;
+}
+
+#question {
+  text-align: start;
+  max-width: 600px;
+  font-size: x-large;
+  align-items: end;
+}
+
+#scoreEl {
+  color: var(--blue);
+  max-width: 200px;
+  flex-wrap: wrap;
+  display: flex;
+  font-size: 2em;
+  padding: 0px;
+  margin: 10px;
+  text-align: center;
+}
+
+#timerEl {
+  color: var(--purple);
+  max-width: 200px;
+  flex-wrap: wrap;
+  display: flex;
+  font-size: 2em;
+  align-items: center;
+  padding: 0px;
+  margin: 10px;
+}
+
+#timeLeft {
+  text-align: center;
+}
+
+#nextBtn, #scoreBtn {
+  font-size: 1em;
+  font-weight: bold;
+  padding: 15px 25px;
+  border: 0.5em dotted var(--lightGreen);
+}
+
+/* Record Score Screen */
+.timesUpBlock, .playerScoreBlock, enterName {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: -webkit-fill-available;
+}
+
+.playerScoreBlock h2 {
+  display: block;
+  font-size: 3.5em;
+  font-weight: bolder;
+  color: var(--blue);
+  justify-content: center;
+  align-content: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.playerScoreBlock p {
+  display: block;
+  font-size: 2.5em;
+  font-weight: bolder;
+  color: var(--lightPurple);
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.enterName h3 {
+  display: block;
+  font-size: 2em;
+  font-weight: bolder;
+  color: var(--green);
+  justify-content: center;
+  align-content: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/* High Score Screen */
+.highScoreList {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.highScoreList h2 {
+  display: inline-flex;
+  font-size: 3.5em;
+  font-weight: bolder;
+  color: var(--blue);
+  justify-content: center;
+  align-content: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: -webkit-fill-available;
+}
+
+.highScoreList ol {
+  display: inline-flex;
+  font-size: 2em;
+  font-weight: bolder;
+  color: var(--green);
+  justify-content: center;
+  align-content: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: -webkit-fill-available;
+}
+
+/* Hide */
+.hide {
+  display: none;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./Assets/CSS/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Monoton&display=swap" rel="stylesheet">
+  <title>Code Quiz</title>
+</head>
+
+<body>
+<main>
+  <!-- Welcome Screen -->
+  <div>
+    <header>
+      <h1>Welcome to Code Quiz!</h1>
+    </header>
+    <section>
+      <h2>Press the "START" button to play</h2>
+      <div>
+        <button id = "startBtn">START!</button>
+      </div>
+    </section>
+  </div>
+
+  <!-- Questions Screen -->
+  <div id = "questionsScreen" class = "hide">
+    <section id = "questContainer" class = "questionsContainer">
+      <div id = "question" class = "questionsContainer">Question</div>
+        <aside class = "score-timer">
+          <p id = "scoreEl" class = "questionsContainer">Score: <br><span id = "score"></span></p><br>
+          <p id = "timerEl" class = "questionsContainer">Time Left: <br><span id = "timeLeft"></span></p>
+        </aside>
+    </section>
+    <section class = "answerContainer box">
+      <div id = "answerBtn" class = "btnGrid hide"></div>
+        <div class = "controls">
+          <button id = "nextBtn" class = "controls hide">Next</button>
+          <button id = "scoreBtn" class = "controls hide">Record Score</button>
+        </div>
+    </section>
+  </div>
+
+  <!-- Player Score Screen -->
+    <!-- Time is Up Block -->
+  <div id = "playerScoreScreen" class = "hide">
+    <section class = "timesUpBlock">
+      <!-- Player Score Block-->
+      <div class = "playerScoreBlock">
+        <h2 id = "timesUp">Your Time is Up!</h2>
+          <p id = "finalScoreEl">Your Score: <span id = "finalScore"></span></p>
+      </div>
+    </section>
+    <!-- High Score Block -->
+    <section class = "enterName">
+      <h3 id = "nameTitle">Enter your name to record your score!</h3>
+      <br>
+      <form>
+        <label for = "userName">Name</label>
+          <input type = "name" id = "name" placeholder = "Enter your name" name = "name">
+        <label for = "userScore">Enter your score</label>
+          <input type = "score" id = "userScore" placeholder = "Enter your score" name = "userScore">
+      </form>
+    </section>
+  </div>
+
+  <!-- List of High Scores -->
+  <section id = "highScoreScreen" class = "hide">
+    <h2 class = "highScoreList hide">HIGH SCORES</h2>
+    <div>
+      <ol id = "highScoreList"></ol>      
+    </div>
+  </section>
+
+</main>
+  <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
